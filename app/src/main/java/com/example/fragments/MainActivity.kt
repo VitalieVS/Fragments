@@ -12,6 +12,10 @@ class MainActivity : AppCompatActivity() {
         val firstFragment = FirstFragment()
         val secondFragment = SecondFragment()
 
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fragmentHolder, firstFragment)
+            commit()
+        }
 
         googleButton.setOnClickListener {
             supportFragmentManager.beginTransaction().apply{
